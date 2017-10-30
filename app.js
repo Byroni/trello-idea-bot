@@ -13,11 +13,11 @@ client.on('message', msg => {
     var idea = msg.content.substr(msg.content.indexOf(' ' ) + 1);
 
     if (cmd === '!idea') {
-        trello.addCard(idea, '', '59b4f885bdeef2d997a0a21e', (err, card) => {
+        trello.addCard(idea, '', process.env.IDEA_BACKLOG_LIST_ID, (err, card) => {
             if (err) {
                 msg.reply("I couldn't create your card. Check your command and make sure it is in the format of !idea [message]");
             } else {
-                msg.reply('I have gone ahead and added your card for you');
+                msg.reply('I have gone ahead and made you card. You can view it here: https://trello.com/b/V7XrnOEF/project-hot-sauce');
             }
         })
     }

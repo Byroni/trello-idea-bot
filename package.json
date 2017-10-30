@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Byroni/trello-idea-bot#readme",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.2.1",
+    "superagent": "^3.8.0",
+    "trello": "^0.8.0"
   }
 }
